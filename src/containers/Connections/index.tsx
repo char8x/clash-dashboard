@@ -270,6 +270,10 @@ export default function Connections () {
         )
     })
 
+    useEffect(() => {
+        toggleSave()
+    }, [])
+
     return (
         <div className="page !h-100vh">
             <Header title={t('title')}>

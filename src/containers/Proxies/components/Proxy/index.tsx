@@ -55,11 +55,11 @@ export function Proxy (props: ProxyProps) {
     const delayText = delay === 0 ? '-' : `${delay}ms`
     const meanDelayText = !meanDelay ? '' : `(${meanDelay}ms)`
 
-    useLayoutEffect(() => {
-        const handler = () => { speedTest() }
-        EE.subscribe(Action.SPEED_NOTIFY, handler)
-        return () => EE.unsubscribe(Action.SPEED_NOTIFY, handler)
-    }, [speedTest])
+    // useLayoutEffect(() => {
+    //     const handler = () => { speedTest() }
+    //     EE.subscribe(Action.SPEED_NOTIFY, handler)
+    //     return () => EE.unsubscribe(Action.SPEED_NOTIFY, handler)
+    // }, [speedTest])
 
     const hasError = useMemo(() => delay === 0, [delay])
     const color = useMemo(
